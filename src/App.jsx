@@ -59,16 +59,7 @@ function App() {
 
     } else {
 
-      // MAX 3 SEATS
-
-      if (selectedSeats.length >= 3) {
-
-        alert(
-          "You Can Select Maximum 3 Seats"
-        );
-
-        return;
-      }
+      // UNLIMITED SEAT SELECTION
 
       setSelectedSeats([
         ...selectedSeats,
@@ -236,17 +227,14 @@ function App() {
             key={seat}
 
             className={`seat
-
               ${bookedSeats.includes(seat)
                 ? "booked"
                 : ""
               }
-
               ${selectedSeats.includes(seat)
                 ? "selected"
                 : ""
               }
-
             `}
 
             onClick={() =>
